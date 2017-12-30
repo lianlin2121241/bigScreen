@@ -1,0 +1,164 @@
+*{
+    box-sizing: border-box;
+}
+html,body,ul,ol{
+    margin: 0px;
+    padding:0px;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+body{
+    background: #0E2A43 url(../images/bg.jpg) no-repeat;
+    background-size: 100% 100%;
+}
+ul,ol{
+    list-style: none;
+}
+
+/* 模态框样式开始 */
+.modal-close{
+    font-family:'Helvetica Neue', Helvetica, 'Microsoft Yahei', 'Hiragino Sans GB', 'WenQuanYi Micro Hei', sans-serif;
+    position: absolute;
+    right:30px;
+    top:25px;
+    color: #ffffff;
+    font-size: 30px;
+    transition: all 0.5s ease-out;
+    cursor: pointer;
+}
+.modal-close:hover{
+    transform: rotate(180deg);
+}
+/* 模态框样式结束 */
+
+/* 图片滚动样式开始 */
+.slider-list{
+    position: absolute;
+    width: 100%;
+    height:100%;
+}
+.slider-item{
+    position: absolute;
+    width: 100%;
+    height:100%;
+    text-align: center;
+    vertical-align: middle
+}
+.slider-item>img{
+    max-width: 100%;
+    max-height: 100%;
+    vertical-align: middle
+}
+.slider-title{
+    height: 30px;
+    width: 100%;
+    line-height: 30px;
+    color: #fff;
+    text-align: left;
+    text-indent: 10px;
+    font-size: 14px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background: rgba(255, 255, 255, .6);
+    margin: 0px;
+}
+.ctrl {
+    position: absolute;
+    height: 30px;
+    line-height: 30px;
+    width: 100%;
+    bottom: 10px;
+    text-align: center;
+}
+.ctrl .libs {
+    display: inline-block;
+    margin-left: 10px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #333;
+    z-index: 50;
+    cursor: pointer;
+}
+.ctrl span.active {
+    background-color: #fff;
+}
+.ctrl .arrow {
+    display: block;
+    position: absolute;
+    width: 30px;
+    height: 60px;
+    top: 50%;
+    margin-top: -30px;
+    background-color: #333;
+    cursor: pointer;
+    font-family: "宋体";
+    opacity: .5;
+    line-height: 58px;
+    color: #fff;
+    font-size: 20px
+}
+.ctrl .next {
+    top: -250px;
+    right: 0px;
+}
+.ctrl .prev {
+    top: -250px;
+}
+.ctrl .arrow:hover {
+    opacity: 1;
+}
+/* 图片滚动样式结束 */
+
+/* 滚动列表样式开始 */
+.list-table-event{
+
+}
+.list-table-event ul{
+    
+}
+.list-table-event .event-item{
+    border-bottom-width: 1px;
+    border-bottom-style: dashed;
+    border-bottom-color: #ffffff;
+    padding: 2px;
+}
+/* 滚动列表样式结束 */
+/*标题样式*/
+/*渐变*/
+.title-animate-gradient span{
+	background-image: -webkit-gradient(linear, 0 0,right bottom,from(rgba(226, 255, 6, 1)), to(#20f306));
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+/*扫光渐变*/
+.title-animate-slideShine span{
+	/*background: #fbf501 -webkit-linear-gradient(left,#fbf501,#abf3ac 30%,#16ff05 60%,#91f592 90%,#fbf501) no-repeat 0 0;
+    background-size: 30% 100%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-animation: slideShine 2s linear infinite;*/
+    background: #fbf501 -webkit-linear-gradient(left,#fbf501,#fba948 30%,#f3582b 70%,#ffc645 90%,#fbf501) no-repeat 0 0;
+    background-size: 30% 100%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-animation: slideShine 1.3s linear infinite;
+}
+@-webkit-keyframes slideShine{
+	0%{
+		background-position: 0 0;
+	}
+	100%{
+		background-position: 100% 100%;
+	}
+}
+@keyframes slideShine{
+	0%{
+		background-position: 0 0;
+	}
+	100%{
+		background-position: 100% 100%;
+	}
+}
+/*标题样式结束*/
