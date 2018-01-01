@@ -36,22 +36,22 @@ var Container = Com.extends({
         var options = $.extend(true, {}, options, this.options);
         // 构造
         var com = new constructor(options, node);
-        // var eventList = com.eventList;
-        // if (eventList && eventList.length > 0 && eventList.indexOf('__broadcast__') !== -1) {
-        //   console.log('__broadcast__ event can not by set, it is belong to defalut');
-        // }
+        var eventList = com.eventList;
+        if (eventList && eventList.length > 0 && eventList.indexOf('broadcast') !== -1) {
+          console.log('__broadcast__ event can not by set, it is belong to defalut');
+        }
         /**
          * 所有组件实例默认绑定__broadcast__事件
          * @param  {Object} args
          * {
-     *   src: com1, // 触发广播事件的组件实例，为static属性
-     *   evtname: 'evnet_name', // 广播的事件名称 
-     *   data: ['a', 'b'], // 参数数组，包括广播事件触发时的所有参数 
-     * }
+         *   src: com1, // 触发广播事件的组件实例，为static属性
+         *   evtname: 'evnet_name', // 广播的事件名称 
+         *   data: ['a', 'b'], // 参数数组，包括广播事件触发时的所有参数 
+         * }
          */
-        // com.on('__broadcast__', function (args) {
-        //   self.broadcast(args.evtname, args.data);
-        // });
+        com.on('broadcast', function (args) {
+          self.broadcast(args.evtname, args.data);
+        });
         return com;
     },
     /**

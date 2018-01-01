@@ -22,6 +22,7 @@
             this.html.css(style);
             this.html[0].style.borderImageSlice=style.borderImageSlice;
         },
+        eventList:["projectOrderDate.dataChange"],
         defaultOptions:{
             borderStyle:"s1"
         },
@@ -32,6 +33,9 @@
          */
         bindEvent:function(){
             var self=this;
+            this.on("projectOrderDate.dataChange",function(data){
+                console.log("border接收到的广播数据："+data);
+            })
         },
         borderStyle:{
             s1:{

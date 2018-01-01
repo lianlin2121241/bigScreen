@@ -11,13 +11,13 @@ var bigScreenIndex = Container.extends({
     init:function(){
         var self = this;
         this.computeSize();
-        this.coms.barCom = new barCom({
+        /* this.coms.barCom = new barCom({
             dataType:"api",
             data:baseUrl.getObjectOrder,
             poll:true,
             timeout:5000
-        }, "#objectOrder");
-        this.coms.barCom = new barCom({
+        }, "#objectOrder"); */
+        this.coms.barCom = this.factory(barCom,{
             dataType:"static",
             data:[{
                 name:"项目11",
@@ -61,7 +61,7 @@ var bigScreenIndex = Container.extends({
             }
         }, "#objectOrder1");
         
-        this.coms.sliderCom = new sliderCom({
+        this.coms.sliderCom = this.factory(sliderCom,{
             dataType:"static",
             data:[{
                 text:"周杰伦",
@@ -92,12 +92,12 @@ var bigScreenIndex = Container.extends({
             },
         }, "#silderDemo");
         
-        this.coms.borderCom = new borderCom({
+        this.coms.borderCom = this.factory(borderCom,{
             borderStyle:"s4"
         }, "#borderDemo");
 
         
-        this.coms.modal1 = new modalCom({
+        /* this.coms.modal1 = new modalCom({
             children:[
                 {
                     itemStyle:{
@@ -116,7 +116,7 @@ var bigScreenIndex = Container.extends({
                     }
                 }
             ] 
-        }, "#modal1");
+        }, "#modal1"); */
         
         this.coms.titleCom = new titleCom({
             dataType: "static",
@@ -185,7 +185,7 @@ var bigScreenIndex = Container.extends({
             timeout: 5000
         }, "#carouselList");
         
-        this.coms.carouselCom = new carouselCom({
+        /* this.coms.carouselCom = new carouselCom({
             dataType: "api",
             data: baseUrl.getObjectOrder1,
             poll: true,
@@ -195,7 +195,7 @@ var bigScreenIndex = Container.extends({
                 "color":"#fff",
                 "lineHeight":"28px",
             }
-        }, "#carouselListApi");
+        }, "#carouselListApi"); */
        
         this.coms.projectOrderCom = new projectOrderComPic({
         	dataType: "static",
@@ -264,13 +264,13 @@ var bigScreenIndex = Container.extends({
             xDeg: -45,
             yDeg: 0
         }, "#objectOrder3");
-        this.coms.projectOrderDate = new projectOrderDate({
+        this.coms.projectOrderDate = this.factory(projectOrderDate,{
         	innerStyle:{
         		fontSize:26,
         		color: '#fff'
         	}
         },"#objectOrder4");
-        this.coms.projectOrderDate = new mapCom({
+        /* this.coms.projectOrderDate = new mapCom({
         	dataType: "static",
         	data: [{
         		name:'北京',
@@ -385,7 +385,7 @@ var bigScreenIndex = Container.extends({
             dataRangeText: ["高","低"], 
             dataRangePosition: ["left","bottom"],
             dataRangeTextColor:"#333"
-        },"#map");
+        },"#map"); */
         
 	
         this.bindEvent();

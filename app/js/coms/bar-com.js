@@ -23,6 +23,7 @@
                 setInterval(this.loadData.bind(this),this.currentOptions.timeout)
             }
         },
+        eventList:["projectOrderDate.dataChange"],
         defaultOptions:{
             dataType:"static",
             data:[],
@@ -102,7 +103,10 @@
          * @return undefined
          */
         bindEvent:function(){
-        	var self=this;
+            var self=this;
+            this.on("projectOrderDate.dataChange",function(data){
+                console.log("bar接收到的广播数据："+data);
+            })
         },
 
         /**
